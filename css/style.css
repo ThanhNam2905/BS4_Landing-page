@@ -46,6 +46,7 @@ img {
     vertical-align: middle;
 }
 
+
 /* --------------------- Utilities css --------------------- */
 .btn--download,
 .btn--play {
@@ -70,6 +71,20 @@ img {
     color: var(--white-color);
     background-color: var(--primary-color);
 }
+.section__title {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: var(--black--color-400);
+}
+.section__title span {
+    color: var(--primary-color);
+    border-bottom: 4px solid var(--primary-color);
+}
+.section-padding {
+    padding: 80px 0;
+}
+
 
 /* --------------------- Header section css --------------------- */
 .navbar {
@@ -303,4 +318,142 @@ img {
     text-align: center;
     font-size: 24px;
     cursor: pointer;
+}
+
+
+/* --------------------- Features section css --------------------- */
+.features-item {
+    margin: 15px;
+}
+.features-item .card {
+    box-shadow: var(--shadow-black-100);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.features-item .card::before,
+.features-item .card::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+.features-item .card::before {
+    width: 20px;
+    height: 20px;
+    left: -20px;
+    top: 42%;
+    background-color: var(--color-1);
+}
+.features-item:hover .card::before {
+    left: 10px;
+    opacity: 1;
+}
+.features-item .card::after {
+    width: 30px;
+    height: 30px;
+    right: -30px;
+    top: 80%;
+    background-color: var(--color-2);
+}
+.features-item:hover .card::after {
+    right: -10px;
+    opacity: 1;
+}
+.features-item .features-item__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0px auto 20px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+.features-item .features-item__icon::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 105%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--primary-color);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+.features-item:hover .features-item__icon::before {
+    left: 0;
+    border-radius: 50%;
+    opacity: 1;
+}
+.features-item:hover .features-item__icon i {
+    color: var(--white-color);
+    font-size: 20px;
+    transition-delay: 0.2s;
+}
+.features-item i {
+    color: var(--primary-color);
+    font-size: 26px;
+    line-height: 60px;
+    transition: all 0.5s ease;
+}
+.features-item .features-item__title {
+    font-size: 22px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 15px 0;
+    color: var(--black--color-900);
+}
+.features-item p {
+    line-height: 1.8;
+    padding: 0 5px;
+}
+.owl-carousel .owl-dots {
+    padding: 0 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-carousel .owl-dots button.owl-dot {
+    width: 34px;
+    height: 7px;
+    border-radius: 15px;
+    background-color: #dddddd;
+    margin: 0 5px;
+    display: inline-block;
+}
+.owl-carousel .owl-dots button.owl-dot.active {
+    background-color: var(--primary-color);
+}
+
+
+/* --------------------- Fun-Facts section css --------------------- */
+.fun-facts-section {
+    background-color: #eee;
+}
+.fun-facts__img img {
+    max-width: 250px;
+    width: 100%;
+}
+.fun-facts__item {
+    margin-bottom: 30px;
+}
+.fun-facts__item .card {
+    border-radius: 10px;
+}
+.fun-facts__item .card h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+.fun-facts__item:nth-child(1) .card{
+    background-color: var(--color-1);
+}
+.fun-facts__item:nth-child(2) .card{
+    background-color: var(--color-2);
+}
+.fun-facts__item:nth-child(3) .card{
+    background-color: var(--color-3);
+}
+.fun-facts__item:nth-child(4) .card{
+    background-color: var(--primary-color);
 }
