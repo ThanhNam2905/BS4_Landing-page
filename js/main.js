@@ -44,7 +44,8 @@ $(document).ready(function() {
                 items:3,
             }
         }
-    })
+    });
+
     $('.screenshots-carousel').owlCarousel({
         loop:true,
         margin:0,
@@ -65,10 +66,30 @@ $(document).ready(function() {
                 items:4,
             }
         }
-    })
+    });
+
     $('.teams-carousel').owlCarousel({
         loop:true,
         margin:0,
+        autoplay: true,
+        dots: true, 
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            768:{
+                items:2,
+            },
+            992:{
+                items:3,
+            },
+        }
+    });
+
+    $('.testimoials-carousel').owlCarousel({
+        loop:true,
+        margin:30,
         autoplay: true,
         dots: true, 
         responsiveClass:true,
