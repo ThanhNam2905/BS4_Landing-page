@@ -640,50 +640,61 @@ img {
 .pricing__item {
     box-shadow: var(--shadow-black-100);
 }
-.pricing__item .pricing-item__title {
+.pricing__item .pricing-item__header {
     font-size: 28px;
     font-weight: 600;
     text-align: center;padding: 16px 20px;
     border-bottom: 1px solid #ddd;
+    text-transform: capitalize;
 }
-.pricing__item .pricing-item__content .price {
-    margin: 25px 20px 0px;
+.pricing__item .pricing-item__body .pricing-item__price {
+    padding: 25px 20px 25px;
+    line-height: 0.7;
     font-weight: 300;
 }
-.pricing__item .pricing-item__content .price span {
-    font-size: 62px;
+.pricing__item .pricing-item__body .pricing-item__price .currency {
+    align-self: flex-start;
+}
+.pricing__item .pricing-item__body .pricing-item__price .price {
+    font-size: 72px;
     font-weight: 700;
     color: var(--primary-color);
     display: inline-block;
     margin: 0 10px;
 }
-.pricing__item .pricing-item__content .details {
+.pricing__item .pricing-item__body .pricing-item__price .period {
+    font-size: 15px;
+    align-self: flex-end;
+    text-transform: uppercase;
+}
+.pricing__item .pricing-item__body .details {
     padding: 0px 25px;
     margin: 15px 0px 30px;
 }
-.pricing__item .pricing-item__content .details li:first-child {
-    padding-top: 0px !important;
-}
-.pricing__item .pricing-item__content .details li:last-child {
+.pricing__item .pricing-item__body .details li:last-child {
     padding-bottom: 0px !important;
     border-bottom: none !important;
 }
-.pricing__item .pricing-item__content .details li i {
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--primary-color);
-    line-height: 30px;
-    display: block;
+.pricing__item .pricing-item__body .details li {
+    position: relative;
 }
-.pricing__item .pricing-item__content .details li p {
+.pricing__item .pricing-item__body .details li i {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-size: 16px;
+    color: var(--primary-color);
+    width: 25px;
+    height: 25px;
+}
+.pricing__item .pricing-item__body .details li p {
     font-size: 14px;
     font-weight: 300;
+    line-height: 1.8;
     color: var(--black--color-400);
+    padding-left: 25px;
 }
-.pricing__item a.btn {
+.pricing__item .pricing-item__footer a.btn {
     margin-bottom: 10px !important;
     display: inline-block;
     box-shadow: var(--shadow-black-100);
@@ -698,10 +709,72 @@ img {
     margin: 15px;
     box-shadow: var(--shadow-black-100);
     cursor: pointer;
+    border-radius: 15px !important;
+    overflow: hidden;
 }
 .teams__item .card-body h6 {
     font-size: 20px;
     font-weight: 500;
+}
+
+
+/* --------------------- Faq section css --------------------- */
+.faq-section .accordion-item:not(:last-child) {
+    margin-bottom: 30px;
+}
+.faq-section .accordion-header {
+    padding: 20px 30px;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+}
+.faq-section .accordion-header::before {
+    content: "\002B";
+    position: absolute;
+    font-weight: 600;
+    font-size: 28px;
+    right: 10px;
+    color: var(--black--color-400);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    transition: all 0.5s ease;
+}
+.faq-section .accordion-header h4 {
+    font-size: 18px;
+    color: var(--black--color-400);
+    font-weight: 500;
+    margin: 0;
+    transition: all 0.5s ease;
+}
+.faq-section .accordion-header:not(.collapsed) {
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.faq-section .accordion-header:not(.collapsed):before {
+    content: "\002D";
+    color: var(--white-color);
+}
+.faq-section .accordion-header:not(.collapsed) h4 {
+    color: var(--white-color);
+}
+.faq-section .accordion-body {
+    padding: 25px 20px 25px 40px;
+    background-color: var(--black--color-100);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.faq-section .accordion-body p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
 }
 
 
