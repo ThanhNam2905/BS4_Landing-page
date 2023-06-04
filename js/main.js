@@ -2,6 +2,11 @@
 
 $(document).ready(function() {
 
+    // ScrollIT JS
+    $.scrollIt({
+        topOffset: -70  
+    });
+
     /* ----------------- Navbar Shrink ----------------- */
     $(window).on("scroll", function() {
         if($(this).scrollTop() > 60) {

@@ -37,6 +37,8 @@ body {
     overflow-x: hidden;
     background-color: var(--white-color);
     line-height: 1.6;
+    scroll-behavior: smooth;
+    transition: all 0.5s ease;
 }
 ul {
     list-style-type: none;
@@ -578,7 +580,7 @@ img {
 }
 
 
-/* --------------------- Testimoials section css --------------------- */
+/* --------------------- Testimonials section css --------------------- */
 .testimoials-section {
     background-color: #eee;
 }
@@ -723,7 +725,7 @@ img {
     margin-bottom: 30px;
 }
 .faq-section .accordion-header {
-    padding: 20px 30px;
+    padding: 20px 50px 20px 30px;
     box-shadow: var(--shadow-black-100);
     border-radius: 15px;
     transition: all 0.5s ease;
@@ -779,6 +781,9 @@ img {
 
 
 /* --------------------- Contact section css --------------------- */
+.contact-section {
+    background-color: #eee;
+}
 .contact__info .contact-info__address .icon i,
 .contact__info .contact-info__mail .icon i,
 .contact__info .contact-info__phone .icon i {
@@ -795,7 +800,7 @@ img {
 }
 .form-contact .row .col-lg-6,
 .form-contact .row .col-12 {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .form-contact .row .col-lg-6 .form-control,
 .form-contact .row .col-12 .form-control {
@@ -806,10 +811,11 @@ img {
     font-weight: 400;
     color: var(--black--color-900);
     transition: all 0.5s ease;
+    border-bottom: 3px solid transparent;
 }
 .form-contact .row .col-lg-6 .form-control:focus,
 .form-contact .row .col-12 .form-control:focus {
-    box-shadow: 0 5px 10px var(--primary-color);
+    border-color: var(--primary-color);
 }
 .form-contact .row .col-lg-6 .form-control::placeholder,
 .form-contact .row .col-12 .form-control::placeholder {
