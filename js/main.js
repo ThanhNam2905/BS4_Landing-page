@@ -36,7 +36,7 @@ $(document).ready(function() {
     $('.features-carousel').owlCarousel({
         loop:true,
         margin:0,
-        autoplay: true,
+        // autoplay: true,
         responsiveClass:true,
         responsive:{
             0:{
@@ -54,7 +54,32 @@ $(document).ready(function() {
     $('.screenshots-carousel').owlCarousel({
         loop:true,
         margin:0,
-        autoplay: true,
+        // autoplay: true,
+        dots: true, 
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            575:{
+                items:2,
+            },
+            768:{
+                items:3,
+            },
+            992:{
+                items:4,
+            },
+            1220:{
+                items:5,
+            }
+        }
+    });
+
+    $('.testimonials-carousel').owlCarousel({
+        loop:true,
+        margin:0,
+        // autoplay: true,
         dots: true, 
         responsiveClass:true,
         responsive:{
@@ -67,23 +92,20 @@ $(document).ready(function() {
             992:{
                 items:3,
             },
-            1220:{
-                items:4,
-            }
         }
     });
 
     $('.teams-carousel').owlCarousel({
         loop:true,
         margin:0,
-        autoplay: true,
+        // autoplay: true,
         dots: true, 
         responsiveClass:true,
         responsive:{
             0:{
                 items:1,
             },
-            768:{
+            640:{
                 items:2,
             },
             992:{
@@ -92,22 +114,9 @@ $(document).ready(function() {
         }
     });
 
-    $('.testimoials-carousel').owlCarousel({
-        loop:true,
-        margin:30,
-        autoplay: true,
-        dots: true, 
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
-            },
-            768:{
-                items:2,
-            },
-            992:{
-                items:3,
-            },
-        }
+
+    // Navbar Collapse
+    $(".nav-link").on("click", function() {
+        $(".navbar-collapse").collapse("hide");
     })
 })

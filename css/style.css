@@ -30,7 +30,7 @@
     border: none;
     box-sizing: border-box;
 }
-body {
+html, body {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -100,11 +100,11 @@ img {
     font-weight: 800;
     text-transform: capitalize;
     color: var(--black--color-900);
-    letter-spacing: 1.2px;
+    letter-spacing: 1.1px;
 }
 .section__title span {
     color: var(--primary-color);
-    border-bottom: 4px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 .section-padding {
     padding: 80px 0;
@@ -346,7 +346,9 @@ img {
 }
 
 
-/* --------------------- Features section css --------------------- */
+/* ------------------------------------------ 
+    Features section css 
+------------------------------------------ */
 .features-item {
     margin: 15px;
 }
@@ -554,7 +556,6 @@ img {
     width: 100%;
     height: 4px;
     background-color: var(--primary-color);
-
 }
 .hows__item span {
     font-size: 26px;
@@ -581,29 +582,31 @@ img {
 
 
 /* --------------------- Testimonials section css --------------------- */
-.testimoials-section {
+.testimonials-section {
     background-color: #eee;
 }
-.testimoials__item .card {
+.testimonials__item {
+    margin: 15px;
+}
+.testimonials__item .card {
     padding: 33px 25px;
     background-color: transparent;
     box-shadow: var(--shadow-black-100);
     border-radius: 10px;
 }
-.testimoials__item .card .card-img-top {
+.testimonials__item .card .card-img-top {
     width: 95px;
     height: 95px;
     margin-bottom: 25px;
-    
 }
-.testimoials__item .card .card-img-top img {
+.testimonials__item .card .card-img-top img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid var(--primary-color);
 }
-.testimoials__item .card .card-img-top i {
+.testimonials__item .card .card-img-top i {
     position: absolute;
     top: 50%;
     right: -10%;
@@ -618,21 +621,21 @@ img {
     transform: translateY(-50%);
     display: inline-block;
 }
-.testimoials__item .card .card-body p {
+.testimonials__item .card .card-body p {
     font-size: 14px;
     font-weight: 300;
     line-height: 1.8;
 }
-.testimoials__item .card .card-body h5 {
+.testimonials__item .card .card-body h5 {
     font-size: 20px;
     font-weight: 500;
     margin: 10px 0 0px;
 }
-.testimoials__item .card .card-body span {
+.testimonials__item .card .card-body span {
     font-size: 14px;
     font-weight: 300;
 }
-.testimoials__item .card .card-body .star-rating i {
+.testimonials__item .card .card-body .star-rating i {
     color: var(--color-2);
     font-size: 15px;
 }
@@ -641,6 +644,7 @@ img {
 /* --------------------- Pricing section css --------------------- */
 .pricing__item {
     box-shadow: var(--shadow-black-100);
+    border-radius: 15px;
 }
 .pricing__item .pricing-item__header {
     font-size: 28px;
@@ -845,7 +849,7 @@ img {
     display: inline-block;
     transition: all 0.4s ease;
 }
-.footer .row .col-lg-3 ul.quicks-link li {
+.footer .row .col-lg-3 ul.quicks-link li:not(:last-child) {
     margin-bottom: 10px;
     transition: all 0.4s ease;
 }
@@ -914,4 +918,312 @@ img {
     font-size: 15px;
     font-weight: 300;
     color: #ddd;
+}
+
+
+/* ------------------------------------------ 
+    Responsive css 
+------------------------------------------ */
+@media (max-width: 991px) {
+    .section-padding {
+        padding: 70px 0;
+    }
+    .section__title {
+        font-size: 32px;
+        font-weight: 700;
+    }
+    
+    .navbar .navbar-brand {
+        font-size: 26px;
+        font-weight: 500;
+    }
+    .navbar .navbar-toggler {
+        box-shadow: var(--shadow-black-300);
+        display: inline-block;
+        background-color: var(--dark-to-primary-color);
+        width: 42px;
+        height: 38px;
+        padding: 0;
+        font-size: 20px;
+        color: var(--white-color) !important;
+    }
+    .navbar-nav {
+        background-color: var(--dark-to-primary-color);
+        box-shadow: var(--shadow-black-300);
+    }
+    .navbar-nav .nav-item {
+        padding: 10px 45px;
+        margin: 0;
+    }
+    .navbar.navbar-shrink .navbar-toggler,
+    .navbar.navbar-shrink .navbar-nav {
+        background-color: var(--primary-color);
+    }
+
+    .home-section {
+        padding: 140px 0 130px;
+        border-radius: 0 0 90px 0;
+    }
+    .home-section .home__img .home__circle {
+        width: 320px;
+        height: 320px;
+    }
+    .home-section .home__img .home__circle::before {
+        top: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        transform-origin: 138px 138px;
+    }
+    .home-section .home-content__text h1 {
+        font-size: 36px;
+    }
+    .home-section .home__img img {
+        width: 220px;
+    }
+
+    .features-item .features-item__icon {
+        margin-bottom: 10px;
+    }
+    .owl-carousel .owl-dots {
+        margin-top: 10px;
+    }
+
+    .fun-facts__img img {
+        max-width: 230px;
+    }
+    .fun-facts__item .card h3 {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .download-section .download-item {
+        margin-bottom: 30px;
+    }
+
+    .hows-section .hows__item {
+        box-shadow: var(--shadow-black-100);
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+    .hows-section .hows__item.line-height-style::before {
+        content: none;
+    }
+    .hows-section .hows__item span {
+        font-size: 22px;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+    }
+    .hows-section .hows__item h3 {
+        margin: 24px 0 16px;
+    }
+
+    .pricing-section .pricing__item {
+        margin-bottom: 30px;
+    }
+
+    .contact-section .contact__info .contact-info__mail a {
+        word-break: break-all;
+    }
+
+    .footer .row .col-sm-6.col-md-4.col-lg-3 {
+        margin-bottom: 15px !important;
+        padding-left: 0px;
+        padding-right: 25px;
+    }
+    .footer .copy-right {
+        padding-bottom: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn--download,
+    .btn--play {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+    .section-padding {
+        padding: 60px 0;
+    }
+    .section__title {
+        font-size: 30px;
+    }
+
+    .navbar .container {
+        padding: 5px 15px;
+    }
+
+    .home-section {
+        padding: 140px 0 100px;
+        border-radius: 0;
+    }
+    .home-section .home__content {
+        margin-bottom: 45px;
+    }
+    .home-section .home-content__text h1 {
+        font-size: 32px;
+    }
+    .home-section .home-content__text p {
+        font-size: 15px;
+    }
+    .home-section .home__img .home__circle {
+        width: 300px;
+        height: 300px;
+    }
+    .home-section .home__img .home__circle::before {
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        transform-origin: 125px 125px;
+    }
+    .home-section .home-content__text h1 {
+        font-size: 36px;
+    }
+    .home-section .home__img img {
+        width: 200px;
+    }
+
+    .fun-facts__img img {
+        max-width: 200px;
+    }
+    .fun-facts__content {
+        margin-top: 45px;
+    }
+    .fun-facts__item .card h3 {
+        font-size: 24px;
+    }
+    .fun-facts__item .card p {
+        font-size: 14px;
+    }
+
+    .hows-section .hows__item.line-height-style::before {
+        width: 0;
+    }
+    .hows-section .hows__item span {
+        font-size: 18px;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+    }
+    .hows-section .hows__item h3 {
+        margin: 20px 0 14px;
+        font-size: 20px;
+    }
+
+    .teams__item {
+        margin: 0 10px;
+        border-radius: 5px !important;
+    }
+    .teams__item .card .card-img-top {
+        padding: 15px 15px 0 !important;
+    }
+    .teams__item .card-body {
+        padding: 15px !important;
+    }
+    .teams__item .card-body h6 {
+        font-size: 18px;
+    }
+    .teams__item .card-body p {
+        font-size: 15px;
+    }
+
+    .faq-section .accordion-item .accordion-header h4 {
+        font-size: 18px;
+    }
+    .faq-section .accordion-item .accordion-body {
+        padding: 15px 25px;
+    }
+    .faq-section .accordion-item .accordion-body p {
+        font-size: 14px;
+    }
+
+    .contact-section .row .col-md-5.col-lg-4 {
+        padding-right: 0px !important;
+    }
+    .contact-section .row .col-md-7.col-lg-8 {
+        padding-left: 0px !important;
+    }
+    .contact-section .row .col-md-5.col-lg-4,
+    .contact-section .row .col-md-7.col-lg-8 {
+        padding: 0px 20px !important;
+    }
+    .footer .row .col-sm-6.col-md-4.col-lg-3 {
+        padding: 0 20px !important;
+    }
+
+    .footer ul.social-follow li a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .footer ul.social-follow li a i {
+        font-size: 16px !important;
+    }
+    
+}
+
+@media (max-width: 640px) {
+    .section-padding {
+        padding: 50px 0;
+    }
+    .section__title {
+        font-size: 26px;
+    }
+
+    .section-padding > .container {
+        padding: 5px 35px;
+    }
+    .navbar .navbar-brand {
+        font-size: 24px;
+    }
+
+    .home-section .home-content__text h1 {
+        font-size: 28px;
+    }
+
+    .features-item .features-item__title {
+        font-size: 20px;
+    }
+    .features-item .features-item__content p {
+        font-size: 15px !important;
+    }
+
+    .fun-facts__img img {
+        max-width: 180px;
+    }
+    .fun-facts__content p {
+        font-size: 15px !important;
+    }
+
+    .hows-section .col-lg-3.col-sm-6:nth-child(3) .hows__item,
+    .hows-section .col-lg-3.col-sm-6:nth-child(4) .hows__item {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-padding {
+        padding: 40px 0;
+    }
+    .section__title {
+        font-size: 24px;
+    }
+
+    .navbar .container,
+    .section-padding .container,
+    .contact-section .row .col-md-5.col-lg-4,
+    .contact-section .row .col-md-7.col-lg-8 {
+        padding: 5px 20px !important;
+    } 
+
+    .screenshots-section .owl-carousel .owl-item img {
+        display: block;
+        width: 70% !important;
+        margin: 0 auto;
+    }
+    .footer .row .col-sm-6.col-md-4.col-lg-3 {
+        padding: 0 20px !important;
+    }
 }
