@@ -1,5 +1,5 @@
 /* --------------------- Google Fonts --------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/CSS2?family=Lobster&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,700;1,800&display=swap');
 
 
 :root {
@@ -22,7 +22,7 @@
 }
 
 
-/* --------------------- Global css --------------------- */
+/* --------------------- Global CSS --------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -40,6 +40,16 @@ html, body {
     scroll-behavior: smooth;
     transition: all 0.5s ease;
 }
+body.dark {
+    background-color: var(--bg-dark);
+    --black--color-100: var(--bg-dark);
+    --primary-to-dark-color: var(--bg-dark);
+    --dark-to-primary-color: var(--primary-color);
+    --shadow-black-100: var(--shadow-black-300);
+    --black--alpha-100: rgba(255, 255, 255, 0.05);
+    --black--color-900: #ffffff;
+    --black--color-400: #bbbbbb;
+}
 ul {
     list-style-type: none;
 }
@@ -49,7 +59,7 @@ img {
 }
 
 
-/* --------------------- Utilities css --------------------- */
+/* --------------------- Utilities CSS --------------------- */
 .btn--download,
 .btn--play {
     padding: 14px 32px;
@@ -61,7 +71,7 @@ img {
     text-transform: capitalize;
     transition: all 0.4s linear;
     font-size: 16px;
-    box-shadow: var(--shadow-black-300);
+    box-shadow: var(--shadow-black-300); 
     text-underline-offset: 4px;
 }
 .btn--download:focus,
@@ -111,7 +121,7 @@ img {
 }
 
 
-/* --------------------- Header section css --------------------- */
+/* --------------------- Header section CSS --------------------- */
 .navbar {
     background-color:transparent;
     padding: 20px 0;
@@ -158,7 +168,7 @@ img {
 }
 
 
-/* --------------------- Home section css --------------------- */
+/* --------------------- Home section CSS --------------------- */
 .home-section {
     background-color: var(--primary-to-dark-color);
     min-height: 100vh;
@@ -166,6 +176,7 @@ img {
     position: relative;
     z-index: 1;
     border-radius: 0 0 170px 0;
+    overflow-x: hidden;
 }
 .home-section .effect-wrapper .effect {
     position: absolute;
@@ -347,16 +358,19 @@ img {
 
 
 /* ------------------------------------------ 
-    Features section css 
+    Features section CSS 
 ------------------------------------------ */
 .features-item {
     margin: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--shadow-black-100);
 }
 .features-item .card {
-    box-shadow: var(--shadow-black-100);
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    background-color: var(--black--color-100)  !important;
+    
 }
 .features-item .card::before,
 .features-item .card::after {
@@ -454,9 +468,9 @@ img {
 }
 
 
-/* --------------------- Fun-Facts section css --------------------- */
+/* --------------------- Fun-Facts section CSS --------------------- */
 .fun-facts-section {
-    background-color: #eee;
+    background-color: var(--black--color-100);
 }
 .fun-facts__img img {
     max-width: 250px;
@@ -490,7 +504,7 @@ img {
 }
 
 
-/* --------------------- Screenshots section css --------------------- */
+/* --------------------- Screenshots section CSS --------------------- */
 .screenshots__item {
     margin: 15px;
 }
@@ -499,7 +513,7 @@ img {
 }
 
 
-/* --------------------- Download-app section css --------------------- */
+/* --------------------- Download-app section CSS --------------------- */
 .download-section {
     background: url(./../images/download-app-bg.jpg) no-repeat;
     background-size: cover;
@@ -515,13 +529,14 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--primary-to-dark-color);
     opacity: 0.8;
     z-index: -1;
 }
 .download-item {
     border-radius: 10px;
     padding: 15px 5px;
+    background-color: var(--black--color-100);
 }
 .download-item__icon i {
     font-size: 28px;
@@ -541,7 +556,7 @@ img {
 }
 
 
-/* --------------------- How-it-works section css --------------------- */
+/* --------------------- How-it-works section CSS --------------------- */
 .hows__item {
     padding: 20px;
     position: relative;
@@ -581,9 +596,9 @@ img {
 }
 
 
-/* --------------------- Testimonials section css --------------------- */
+/* --------------------- Testimonials section CSS --------------------- */
 .testimonials-section {
-    background-color: #eee;
+    background-color: var(--black--color-100);
 }
 .testimonials__item {
     margin: 15px;
@@ -641,15 +656,18 @@ img {
 }
 
 
-/* --------------------- Pricing section css --------------------- */
+/* --------------------- Pricing section CSS --------------------- */
 .pricing__item {
     box-shadow: var(--shadow-black-100);
     border-radius: 15px;
+    background-color: var(--black--color-100);
 }
 .pricing__item .pricing-item__header {
     font-size: 28px;
     font-weight: 600;
-    text-align: center;padding: 16px 20px;
+    text-align: center;
+    padding: 16px 20px;
+    color: var(--black--color-900);
     border-bottom: 1px solid #ddd;
     text-transform: capitalize;
 }
@@ -660,6 +678,7 @@ img {
 }
 .pricing__item .pricing-item__body .pricing-item__price .currency {
     align-self: flex-start;
+    color: var(--black--color-400);
 }
 .pricing__item .pricing-item__body .pricing-item__price .price {
     font-size: 72px;
@@ -672,6 +691,7 @@ img {
     font-size: 15px;
     align-self: flex-end;
     text-transform: uppercase;
+    color: var(--black--color-400);
 }
 .pricing__item .pricing-item__body .details {
     padding: 0px 25px;
@@ -707,9 +727,9 @@ img {
 }
 
 
-/* --------------------- Teams section css --------------------- */
+/* --------------------- Teams section CSS --------------------- */
 .teams-section {
-    background-color: #eee;
+    background-color: var(--black--color-100);
 }
 .teams__item {
     margin: 15px;
@@ -718,13 +738,16 @@ img {
     border-radius: 15px !important;
     overflow: hidden;
 }
+.teams__item .card {
+    background-color: var(--black--color-100) !important;
+}
 .teams__item .card-body h6 {
     font-size: 20px;
     font-weight: 500;
 }
 
 
-/* --------------------- Faq section css --------------------- */
+/* --------------------- Faq section CSS --------------------- */
 .faq-section .accordion-item:not(:last-child) {
     margin-bottom: 30px;
 }
@@ -753,7 +776,7 @@ img {
 }
 .faq-section .accordion-header h4 {
     font-size: 18px;
-    color: var(--black--color-400);
+    color: var(--black--color-900);
     font-weight: 500;
     margin: 0;
     transition: all 0.5s ease;
@@ -781,12 +804,17 @@ img {
     font-size: 16px;
     font-weight: 300;
     line-height: 1.7;
+    color: var(--black--color-400);
 }
 
 
-/* --------------------- Contact section css --------------------- */
+/* --------------------- Contact section CSS --------------------- */
 .contact-section {
-    background-color: #eee;
+    background-color: var(--black--color-100);
+}
+.contact-section h5,
+.contact-section .contact__info h6 {
+    color: var(--black--color-900);
 }
 .contact__info .contact-info__address .icon i,
 .contact__info .contact-info__mail .icon i,
@@ -800,7 +828,7 @@ img {
     font-size: 18px;
     color: var(--primary-color);
     display: inline-block;
-    background-color: var(--white-color);
+    background-color: var(--black--color-100);
 }
 .form-contact .row .col-lg-6,
 .form-contact .row .col-12 {
@@ -815,7 +843,9 @@ img {
     font-weight: 400;
     color: var(--black--color-900);
     transition: all 0.5s ease;
-    border-bottom: 3px solid transparent;
+    border: 3px solid transparent;
+    background-color: var(--black--color-100);
+    border-radius: 35px;
 }
 .form-contact .row .col-lg-6 .form-control:focus,
 .form-contact .row .col-12 .form-control:focus {
@@ -833,7 +863,7 @@ img {
 }
 
 
-/* --------------------- Footer section css --------------------- */
+/* --------------------- Footer section CSS --------------------- */
 .footer {
     background-color: var(--primary-color);
     padding-bottom: 0;
@@ -922,7 +952,65 @@ img {
 
 
 /* ------------------------------------------ 
-    Responsive css 
+ Toogle Theme --- light mode and dark mode 
+------------------------------------------ */
+.toggle-theme {
+    position: fixed;
+    z-index: 1200;
+    bottom: calc(50% - 20px);
+    right: 10px;
+    background-color: var(--dark-to-primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    color: var(--white-color);
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+.toggle-theme i {
+    line-height: 50px;
+}
+
+
+/* ------------------------------------------ 
+ Preloader CSS 
+------------------------------------------ */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: var(--primary-to-dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.preloader span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark-to-primary-color);
+    border-radius: 50%;
+    margin: 0 8px;
+    animation: zoomInOut 1s ease infinite;
+}
+@keyframes zoomInOut {
+    0% {
+        opacity: 1;
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+/* ------------------------------------------ 
+    Responsive CSS 
 ------------------------------------------ */
 @media (max-width: 991px) {
     .section-padding {
@@ -931,6 +1019,11 @@ img {
     .section__title {
         font-size: 32px;
         font-weight: 700;
+    }
+
+    .preloader span {
+        width: 34px;
+        height: 34px;
     }
     
     .navbar .navbar-brand {
@@ -1048,6 +1141,11 @@ img {
     }
     .section__title {
         font-size: 30px;
+    }
+
+    .preloader span {
+        width: 30px;
+        height: 30px;
     }
 
     .navbar .container {
@@ -1171,6 +1269,10 @@ img {
     .section__title {
         font-size: 26px;
     }
+    .preloader span {
+        width: 24px;
+        height: 24px;
+    }
 
     .section-padding > .container {
         padding: 5px 35px;
@@ -1217,6 +1319,10 @@ img {
     .contact-section .row .col-md-7.col-lg-8 {
         padding: 5px 20px !important;
     } 
+
+    .home-section .container {
+        padding: 0px 25px;
+    }
 
     .screenshots-section .owl-carousel .owl-item img {
         display: block;

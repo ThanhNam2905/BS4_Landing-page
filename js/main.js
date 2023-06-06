@@ -1,4 +1,9 @@
 
+// Preloader when onload
+$(window).on("load", function() {
+    $(".preloader").fadeOut(400, "swing")
+})
+
 
 $(document).ready(function() {
 
@@ -119,4 +124,41 @@ $(document).ready(function() {
     $(".nav-link").on("click", function() {
         $(".navbar-collapse").collapse("hide");
     })
+
+    // Toogle Theme --- light mode and dark mode 
+    function toggleClassTheme() {
+        if(localStorage.getItem("landing-page-theme") !== null) {
+            if(localStorage.getItem("landing-page-theme") === "dark") {
+                $("body").addClass("dark");
+            }
+            else {
+                $("body").removeClass("dark");
+            }
+        }
+        updateIconTheme();
+    }
+    toggleClassTheme();
+
+    $(".toggle-theme").on("click", function() {
+        $("body").toggleClass("dark");
+
+        if($("body").hasClass("dark")) {
+            localStorage.setItem("landing-page-theme", "dark");
+        }
+        else {
+            localStorage.setItem("landing-page-theme", "light");
+        }
+        updateIconTheme();
+    })
+
+    function updateIconTheme() {
+        if($("body").hasClass("dark")) {
+            $(".toggle-theme i").addClass("fa-sun");
+            $(".toggle-theme i").removeClass("fa-moon");
+        }
+        else {
+            $(".toggle-theme i").addClass("fa-moon");
+            $(".toggle-theme i").removeClass("fa-sun");
+        }
+    }
 })
